@@ -75,7 +75,7 @@ print(f"As duas maiores notas foram: {notas_usadas[0]} e {notas_usadas[1]}")
 
 
 # CORRIJA ISSO
-
+# EM CASA
 #
 # #Media simples
 # media_simples = float((notas_usadas[0] + notas_usadas[1]) + (sprint_1 + sprint_2)/4)
