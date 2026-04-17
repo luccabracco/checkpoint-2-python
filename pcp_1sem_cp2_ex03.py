@@ -71,6 +71,6 @@ media = ((c1 + c2 + c3 - nota_descartada + sp_1 + sp_2) /4) * 0.4 + (gs * 0.6 )
 #Media com peso
 media_peso = media * 0.4
 
-
+print("----------- RESULTADOS FINAIS -----------")
 print(f"A media sem peso é {media:.1f}")
 print(f"A media com peso é {media_peso:.1f}")
