@@ -1,92 +1,76 @@
+print("------------- CALCULADORA DA MEDIA SEMESTRAL -------------")
 
-#Para os checkpoints
+#nota para os checkpoints
 while True:
-    nota_ck_1 = float(input("Qual sua nota do primeiro checkpoint? "))
-    if 0 <= nota_ck_1 <= 10:
+    c1 = float(input("Qual a sua primeira nota do checkpoint? "))
+    if 0 <= c1 <= 10:
         break
     else:
-        print("Insira uma nota válida! (De 0 a 10)")
+        print("Insira uma nota valida!(De 0 a 10)")
 
 while True:
-    nota_ck_2 = float(input("Qual sua nota do segundo checkpoint? "))
-    if 0 <= nota_ck_2 <= 10:
+    c2 = float(input("Qual a sua segunda nota do checkpoint? "))
+    if 0 <= c2 <= 10:
         break
     else:
-        print("Insira uma nota válida! (De 0 a 10)")
+        print("Insira uma nota valida!(De 0 a 10)")
 
 while True:
-    nota_ck_3 = float(input("Qual sua nota do terceiro checkpoint? "))
-    if 0 <= nota_ck_3 <= 10:
+    c3 = float(input("Qual a sua terceira nota do checkpoint? "))
+    if 0 <= c3 <= 10:
         break
     else:
-        print("Insira uma nota válida! (De 0 a 10)")
+        print("Insira uma nota valida!(De 0 a 10)")
 
+print()
 
-
-
-#Para as Sprints
+#nota para as sprints
 while True:
-    sprint_1 = float(input("Qual sua nota do primeiro sprint? "))
-    if 0 <= sprint_1 <= 10:
+    sp_1 = float(input("Qual a sua primeira nota da sprint? "))
+    if 0 <= sp_1 <= 10:
         break
     else:
-        print("Insira uma nota válida! (De 0 a 10)")
+        print("Insira uma nota valida!(De 0 a 10)")
 
 while True:
-    sprint_2 = float(input("Qual sua nota do segundo sprint? "))
-    if 0 <= sprint_2 <= 10:
+    sp_2 = float(input("Qual a sua segunda nota da sprint? "))
+    if 0 <= sp_2 <= 10:
         break
     else:
-        print("Insira uma nota válida! (De 0 a 10)")
+        print("Insira uma nota valida!(De 0 a 10)")
 
+print()
 
-
-#Para a GS
+#nota para a gs
 while True:
-    gs = float(input("Qual sua nota da Global Solution? "))
+    gs = float(input("Qual a sua primeira nota da global solution? "))
     if 0 <= gs <= 10:
         break
     else:
-        print("Insira uma nota válida! (De 0 a 10)")
+        print("Insira uma nota valida!(De 0 a 10)")
 
 
+#descobrir a menor nota do checkpoint
 
-#Ver a menor nota e calcular a media
-def calcular_maior_checkpoints(nota1, nota2, nota3):
-        if nota1 <= nota2 and nota1 <= nota3:
-            menor = nota1
-            maiores = (nota2, nota3)
-        elif nota2 <= nota1 and nota2 <= nota3:
-            menor = nota2
-            maiores = (nota1, nota3)
-        else:
-            menor = nota3
-            maiores = (nota1, nota2)
+def menor_nota(c1, c2, c3):
+    if c1 <= c2 and c1 <= c3:
+       return c1
+    elif c2 <= c3:
+        return c2
+    else:
+        return c3
 
-        soma = maiores[0] + maiores[1]
-        media = soma / 2
+nota_descartada = menor_nota(c1, c2, c3)
+#print(nota_descartada)
 
-        return media, maiores
+print()
 
-resultado_media, notas_usadas = calcular_maior_checkpoints(nota_ck_1, nota_ck_2, nota_ck_3)
+#Calcular a media
+media = ((c1 + c2 + c3 - nota_descartada + sp_1 + sp_2) /4) * 0.4 + (gs * 0.6 )
 
-print(f"As duas maiores notas foram: {notas_usadas[0]} e {notas_usadas[1]}")
-
+#Media com peso
+media_peso = media * 0.4
 
 
-# CORRIJA ISSO
-# EM CASA
-#
-# #Media simples
-# media_simples = float((notas_usadas[0] + notas_usadas[1]) + (sprint_1 + sprint_2)/4)
-#
-# peso1 = float(media_simples * 0.4)
-# peso2 = float(gs * 0.6)
-#
-# media_do_semestre = float(peso1 + peso2)
-#
-# mediaPeso = media_do_semestre * 0.4
-#
-# #Exibir os resultados
-# print(f"A media do semestre, sem os pesos é de: {media_do_semestre:.2f}")
-# print(f"A media do semestre, com os pesos é de: {mediaPeso:.2f}")
+print(f"A media sem peso é {media:.1f}")
+print(f"A media com peso é {media_peso:.1f}")
