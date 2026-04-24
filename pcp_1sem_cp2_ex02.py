@@ -1,6 +1,6 @@
-a = float(input())
-b = float(input())
-c = float(input())
+a = float(input("Digite Valor de A: "))
+b = float(input("Digite Valor de B: "))
+c = float(input("Digite Valor de C: "))
 
 l = sorted([a, b, c], reverse=True)
 A, B, C = l
