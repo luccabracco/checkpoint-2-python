@@ -1,8 +1,13 @@
 # checkpoint-2-python
 
-Lucca Bracco Ferreira - RM: 570175 /
-Joao Pedro Ferrari - RM: 573037 / 
-Nickollas Korner - RM: 569655 / 
-Pierre Biason - RM: 569718 / 
-Lucas Santana - RM: 573197 / 
+Lucca Bracco Ferreira - RM: 570175
+
+Joao Pedro Ferrari - RM: 573037
+
+Nickollas Korner - RM: 569655
+
+Pierre Biason - RM: 569718
+
+Lucas Santana - RM: 573197
+
 Vitor Marcarin do Nascimento - RM: 571873
